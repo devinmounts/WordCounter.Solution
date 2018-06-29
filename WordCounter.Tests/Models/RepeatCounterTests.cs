@@ -6,7 +6,13 @@ using WordCounter.Models;
 namespace WordCounter.Tests
 {
     [TestClass]
-    public class RepeatCounterTests
+    public class RepeatCounterTests : IDisposable
+    {
+        public void Dispose()
+        {
+            RepeatCounter.ClearList();
+        }
+
     {
         [TestMethod]
         public void GetSetTargetWord_ReturnTargetWord_String()
@@ -132,9 +138,22 @@ namespace WordCounter.Tests
         }
 
         [TestMethod]
-        public void SaveWordToList_PopulateList_String()__
+        public void SaveGetWordList_PopulateList_String()
         {
-            
+            //Arrange
+            string testWord01 = "cat";
+            string testWord02 = "dog";
+            RepeatCounter testCounter01 = new RepeatCounter();
+            testCounter01.SaveWordToList(testWord01);
+            RepeatCounter testCounter02 = new RepeatCounter();
+            testCounter02.SaveWordToList(testWord02);
+
+            //Act
+            List<string> result = RepeatCounter.GetList();
+
+
+
+
         }
     }
 }

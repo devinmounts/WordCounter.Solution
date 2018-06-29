@@ -43,9 +43,14 @@ namespace WordCounter.Models
             _wordList.Add(listWord);
         }
 
-        public List<string> GetWordsFromList()
+        public List<string> GetList()
         {
             return _wordList;
+        }
+
+        public static void ClearList()
+        {
+            _wordList.Clear();
         }
 
         public void SetSplitCompareString(string newComparePhrase)
