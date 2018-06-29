@@ -120,15 +120,15 @@ namespace WordCounter.Tests
         public void TestSplitChars_ReturnFinalResult_Int()
         {
             //Arrange
-            string testWord = "at";
-            string testPhrase = "At! at. AT, !!at,.";
+            string testWord = "the";
+            string testPhrase = "The,!! #cat@()cat (the),.the?CAT!";
             RepeatCounter testCounter = new RepeatCounter();
 
             //Act
             int result = testCounter.RunCounter(testWord, testPhrase);
 
             //Assert
-            Assert.AreEqual(4, result);
+            Assert.AreEqual(3, result);
         }
 
     }
