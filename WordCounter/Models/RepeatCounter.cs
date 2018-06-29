@@ -39,8 +39,7 @@ namespace WordCounter.Models
 
         public void SetSplitCompareString(string newComparePhrase)
         {
-            //'?', '-', '_', '#', '@', ':', ';', '(', ')', '*', '<', '>'
-            char[] splitChars = { ' ', '.', ',', '!'};
+            char[] splitChars = { ' ', '.', ',', '!', '?', '-', '_', '#', '@', ':', ';', '(', ')', '*', '<', '>'};
             _comparePhrase = newComparePhrase.ToLower().Split(splitChars);
         }
 
