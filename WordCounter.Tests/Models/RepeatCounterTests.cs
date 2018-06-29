@@ -128,7 +128,7 @@ namespace WordCounter.Tests
             int result = testCounter.RunCounter(testWord, testPhrase);
 
             //Assert
-            Assert.AreEqual(2, result);
+            Assert.AreEqual(4, result);
         }
 
     }
