@@ -13,7 +13,7 @@
 | **Program converts stored word to lower case letters.**| Input: "The" | Output: "the" |
 | **Program allows user to enter in a string, and saves that string** | Input: "The cat" | Output: "The cat" |
 | **Program converts stored string to lower case letters.**| Input: "The cat" | Output: "the cat" |
-| **Program splits lowercase string into array of lowercase words at each space, i.e (" ").**| Input: "the cat" | Output: {"the", "cat"} |
+| **Program splits lowercase string at each space into an array of lowercase words, i.e (" ").**| Input: "the cat" | Output: {"the", "cat"} |
 | **Program loops through arary of words checking to see if lowercase test word is present.**| Input: "Test Word: The; Test string: "The cat" | Output: "Compare: "the" to Array {"the", "cat"}." |
 | **Program uses loop to return an integer value for the number of times the test word appears in the array.**| Input: "Test Word: "The"; Test String: "The cat" | Output: "1" |
 | **Program evaluates splitting string for special characters and returns occurances of word.**| Input: "Test Word: "The"; Test String: "The,!! #cat@()cat (the),.the?CAT!" | Output: "3" |
