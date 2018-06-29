@@ -10,6 +10,7 @@ namespace WordCounter.Models
         private string _targetWord;
         private string[] _comparePhrase;
 
+        //Create Default and Overloaded Constructors.
         public RepeatCounter()
         {
 
@@ -27,9 +28,9 @@ namespace WordCounter.Models
         }
 
 
-
+        // Set & Get Target Word.
         public void SetTargetWord(string newTargetWord)
-        {
+        {                
             _targetWord = newTargetWord.ToLower();
         }
         public string GetTargetWord()
@@ -37,6 +38,7 @@ namespace WordCounter.Models
             return _targetWord;
         }
 
+        //Set and Get Phrase to compare with target word.
         public void SetSplitCompareString(string newComparePhrase)
         {
             char[] splitChars = { ' ', '.', ',', '!', '?', '-', '_', '#', '@', ':', ';', '(', ')', '*', '<', '>' };
@@ -48,6 +50,8 @@ namespace WordCounter.Models
             return _comparePhrase;
         }
 
+
+        //Check if split phrase has instances of target word.
         public int CheckSplitPhrase(string targetWord, string targetPhrase)
         {
             SetTargetWord(targetWord);
@@ -72,11 +76,14 @@ namespace WordCounter.Models
                 return _result;
             }
         }
+
+        //Return Result of comparison
         public int GetResult()
         {
             return _result;
         }
 
+        //Run Repeat Counter
         public int RunCounter(string word,string phrase)
         {
             CheckSplitPhrase(word, phrase);
