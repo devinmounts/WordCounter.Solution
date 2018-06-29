@@ -8,6 +8,7 @@ namespace WordCounter.Models
     {
         private int _result;
         private string _targetWord;
+        private static List<string> _wordList = new List<string> { };
         private string[] _comparePhrase;
 
         public RepeatCounter()
@@ -35,6 +36,11 @@ namespace WordCounter.Models
         public string GetTargetWord()
         {
             return _targetWord;
+        }
+
+        public void SaveWordToList(string listWord)
+        {
+            _wordList.Add(listWord);
         }
 
         public void SetSplitCompareString(string newComparePhrase)
