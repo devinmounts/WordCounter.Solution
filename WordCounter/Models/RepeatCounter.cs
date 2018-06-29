@@ -43,6 +43,11 @@ namespace WordCounter.Models
             _wordList.Add(listWord);
         }
 
+        public List<string> GetWordsFromList()
+        {
+            return _wordList;
+        }
+
         public void SetSplitCompareString(string newComparePhrase)
         {
             char[] splitChars = { ' ', '.', ',', '!', '?', '-', '_', '#', '@', ':', ';', '(', ')', '*', '<', '>'};
