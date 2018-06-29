@@ -115,5 +115,21 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(3, result);
         }
+
+        [TestMethod]
+        public void TestSplitChars_ReturnFinalResult_Int()
+        {
+            //Arrange
+            string testWord = "at";
+            string testPhrase = "At! at. AT, !!at,.";
+            RepeatCounter testCounter = new RepeatCounter();
+
+            //Act
+            int result = testCounter.RunCounter(testWord, testPhrase);
+
+            //Assert
+            Assert.AreEqual(2, result);
+        }
+
     }
 }

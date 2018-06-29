@@ -10,21 +10,21 @@ namespace WordCounter.Models
         private string _targetWord;
         private string[] _comparePhrase;
 
-        //public RepeatCounter()
-        //{
+        public RepeatCounter()
+        {
 
-        //}
+        }
 
-        //public RepeatCounter(string targetWord = "")
-        //{
-        //    _targetWord = targetWord;
-        //}
+        public RepeatCounter(string targetWord = "")
+        {
+            _targetWord = targetWord;
+        }
 
-        //public RepeatCounter(string targetWord = "", string phrase = "")
-        //{
-        //    _targetWord = targetWord;
-        //    _comparePhrase = phrase.ToLower().Split(' ');
-        //}
+        public RepeatCounter(string targetWord = "", string phrase = "")
+        {
+            _targetWord = targetWord;
+            _comparePhrase = phrase.ToLower().Split(' ');
+        }
 
 
 
@@ -39,7 +39,9 @@ namespace WordCounter.Models
 
         public void SetSplitCompareString(string newComparePhrase)
         {
-            _comparePhrase = newComparePhrase.ToLower().Split(' ');
+            //'?', '-', '_', '#', '@', ':', ';', '(', ')', '*', '<', '>'
+            char[] splitChars = { ' ', '.', ',', '!'};
+            _comparePhrase = newComparePhrase.ToLower().Split(splitChars);
         }
 
         public string[] GetComparePhrase()
