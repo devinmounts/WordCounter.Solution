@@ -9,14 +9,13 @@ namespace WordCounter.Tests
     public class RepeatCounterTests
     {
         [TestMethod]
-        public void GetTargetWord_ReturnTargetWord_String()
+        public void GetSetTargetWord_ReturnTargetWord_String()
         {
             //Arrange
             string testTarget = "the";
             RepeatCounter testCounter = new RepeatCounter(testTarget);
 
             //Act
-
             string result = testCounter.GetTargetWord();
 
             //Assert
@@ -97,6 +96,21 @@ namespace WordCounter.Tests
             //Act
             testCounter.CheckSplitPhrase(testWord, testPhrase);
             int result = testCounter.GetResult();
+
+            //Assert
+            Assert.AreEqual(3, result);
+        }
+
+        [TestMethod]
+        public void RunRepeatCounter_ReturnFinalResult_Int()
+        {
+            //Arrange
+            string testWord = "The";
+            string testPhrase = "The Cat walked down THe street to THE store.";
+            RepeatCounter testCounter = new RepeatCounter();
+
+            //Act
+            int result = testCounter.RunCounter(testWord, testPhrase);
 
             //Assert
             Assert.AreEqual(3, result);
